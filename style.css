@@ -1,27 +1,16 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
-  color: #333;
   margin: 0;
   padding: 0;
+  color: #333;
 }
-
 
 header {
   background-color: #3498db;
   color: white;
   text-align: center;
   padding: 40px 20px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 36px;
-}
-
-header p {
-  margin: 10px 0 20px;
-  font-size: 18px;
 }
 
 nav a {
@@ -31,16 +20,11 @@ nav a {
   font-weight: bold;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
-
 section {
   max-width: 800px;
   margin: 40px auto;
   padding: 20px;
-  background-color: #fff;
+  background: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
@@ -49,28 +33,22 @@ h2 {
   color: #2c3e50;
 }
 
-
-ul {
-  padding-left: 20px;
-}
-
-
 form {
   display: flex;
   flex-direction: column;
 }
 
 label {
-  margin-top: 15px;
+  margin-top: 10px;
   font-weight: bold;
 }
 
 input, textarea {
-  margin-top: 5px;
   padding: 10px;
-  font-size: 16px;
+  margin-top: 5px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  font-size: 16px;
   resize: vertical;
 }
 
@@ -79,8 +57,8 @@ button {
   padding: 12px;
   background-color: #3498db;
   color: white;
-  border: none;
   font-size: 16px;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -93,22 +71,16 @@ button:hover {
 .mensagem-sucesso {
   display: none;
   margin-top: 20px;
-  color: green;
+  padding: 12px;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  border-radius: 5px;
   font-weight: bold;
   text-align: center;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
 }
 
-.mensagem-sucesso.visivel {
+
+:target.mensagem-sucesso {
   display: block;
-  opacity: 1;
-}
-
-
-footer {
-  text-align: center;
-  padding: 30px 0;
-  font-size: 14px;
-  color: #888;
 }
