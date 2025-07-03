@@ -25,18 +25,16 @@
 
   <section id="formacao">
     <h2>Formação e Idiomas</h2>
-    <p><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas - IFSP</p>
-    <p><strong>Idiomas:</strong></p>
+    <p><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas - Uninter</p>
     <ul>
       <li>Português — Nativo</li>
       <li>Inglês — Intermediário</li>
-      <li>Espanhol — Básico</li>
     </ul>
   </section>
 
   <section id="portfolio">
     <h2>Portfólio</h2>
-    <p>Acesse o LinkedIn</p>
+    <p>Acesse o LinkedIn:</p>
     <ul>
       <li><a href="https://www.linkedin.com/in/lucas-macatrão-534347155" target="_blank">Meu perfil no LinkedIn</a></li>
     </ul>
@@ -44,44 +42,30 @@
 
   <section id="contato">
     <h2>Contato</h2>
-    <form id="form-contato" onsubmit="enviarMensagem(event)">
+
+    
+    <form action="#sucesso" method="get">
       <label for="nome">Nome:</label>
-      <input type="text" id="nome" required>
+      <input type="text" id="nome" name="nome" required>
 
       <label for="email">Email:</label>
-      <input type="email" id="email" required>
+      <input type="email" id="email" name="email" required>
 
       <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" required></textarea>
+      <textarea id="mensagem" name="mensagem" required></textarea>
 
       <button type="submit">Enviar</button>
     </form>
 
-   
-    <p id="mensagem-sucesso" class="mensagem-sucesso">
+    
+    <div id="sucesso" class="mensagem-sucesso">
       Mensagem enviada com sucesso!
-    </p>
+    </div>
   </section>
 
   <footer>
     &copy; 2025 Lucas Macatrão. Todos os direitos reservados.
   </footer>
-
- 
-  <script>
-    function enviarMensagem(event) {
-      event.preventDefault();
-
-      const mensagem = document.getElementById("mensagem-sucesso");
-      mensagem.classList.add("visivel");
-
-      document.getElementById("form-contato").reset();
-
-      setTimeout(() => {
-        mensagem.classList.remove("visivel");
-      }, 3000);
-    }
-  </script>
 
 </body>
 </html>
