@@ -44,13 +44,36 @@
 
   <section id="contato">
     <h2>Contato</h2>
-    <form>
-      <input type="text" name="nome" placeholder="Seu nome" required>
-      <input type="email" name="email" placeholder="Seu email" required>
-      <textarea name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
-      <input type="submit" value="Enviar mensagem">
-    </form>
-  </section>
+<form id="form-contato" onsubmit="enviarMensagem(event)">
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" required><br><br>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" required><br><br>
+
+  <label for="mensagem">Mensagem:</label><br>
+  <textarea id="mensagem" required></textarea><br><br>
+
+  <button type="submit">Enviar</button>
+</form>
+
+<!-- Mensagem de sucesso -->
+<p id="mensagem-sucesso" style="display:none; color: green; font-weight: bold;">
+  Mensagem enviada com sucesso!
+</p>
+
+<!-- Script para simular envio -->
+<script>
+  function enviarMensagem(event) {
+    event.preventDefault(); // Impede o envio real do formulário
+
+    // Simula o envio e mostra a mensagem
+    document.getElementById("mensagem-sucesso").style.display = "block";
+
+    // Opcional: limpa os campos
+    document.getElementById("form-contato").reset();
+  }
+</script>
 
   <footer>
     &copy; 2025 Lucas Macatrão. Todos os direitos reservados.
